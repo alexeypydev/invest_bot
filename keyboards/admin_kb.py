@@ -9,6 +9,12 @@ start_admin_kb = ReplyKeyboardMarkup(
             KeyboardButton(text='Закрыть временную темку')
         ],
         [
+            KeyboardButton(text='Проекты')
+        ],
+        [
+            KeyboardButton(text='Удалить проект')
+        ],
+        [
             KeyboardButton(text='Добавить выплату по временной'),
             KeyboardButton(text='Добавить выплату по долгосрочной')
         ]
