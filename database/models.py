@@ -1,5 +1,5 @@
 
-from sqlalchemy import DateTime, Integer, String, func
+from sqlalchemy import DateTime, Integer, String, func, ForeignKey
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 class Base(DeclarativeBase):
@@ -27,3 +27,10 @@ class Users(Base):
     tg_id: Mapped[int] = mapped_column(unique=True)
     name: Mapped[str] = mapped_column(String(50))
     username: Mapped[str] = mapped_column(String(50))
+
+
+class LongProjects(Base):
+    __tablename__ = 'LongProjects'
+
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
+    user_id: Mapped[int] = mapped_column(Integer, ForeignKey('Users.id'))

@@ -40,7 +40,7 @@ async def delete_project(callback: types.CallbackQuery, session: AsyncSession):
 
 
 @admin_router.message(F.text == 'Удалить проект')
-async def starring_at_project(msg: types.Message, session: AsyncSession):
+async def staring_at_project(msg: types.Message, session: AsyncSession):
     project_id = 1
     await orm_delete_project(session, project_id)
     await msg.answer('Удалил')

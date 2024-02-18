@@ -4,7 +4,6 @@ import os
 
 from aiogram import Bot, Dispatcher, types
 from aiogram.enums.parse_mode import ParseMode
-from aiogram.fsm.storage.memory import MemoryStorage
 from database.engine import create_db, drop_db, session_maker
 
 from handlers.user_private import router
